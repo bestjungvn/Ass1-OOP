@@ -10,6 +10,7 @@ public class PlayerInput : MonoBehaviour {
 	Animator anim;
 	int punchHash = Animator.StringToHash("punch");
 	int kickHash = Animator.StringToHash("kick");
+	int lowkickHash = Animator.StringToHash("lowkick");
 	
 	void Awake()
     {
@@ -30,6 +31,9 @@ public class PlayerInput : MonoBehaviour {
 		}
 		if (Input.GetKeyDown(KeyCode.W)) {
 			anim.SetTrigger (kickHash);
+		}
+		if (Input.GetKeyDown (KeyCode.E)) {
+			anim.SetTrigger (lowkickHash);
 		}
 	}
 
